@@ -5,12 +5,6 @@ ENV max_mem_in_kb="200000"
 
 RUN [ "cross-build-start" ]
 
-RUN mkdir -p /opt/tsharklogs
-
-WORKDIR /opt/tsharklogs
-
-VOLUME /opt/tsharklogs
-
 RUN [ "cross-build-end" ]
 
 HEALTHCHECK --interval=5s --timeout=5s --retries=3 \
